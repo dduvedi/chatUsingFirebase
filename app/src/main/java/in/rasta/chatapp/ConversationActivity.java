@@ -87,13 +87,13 @@ public class ConversationActivity extends AppCompatActivity implements Observer<
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
 
-        if (requestCode == 0) {
+        if (requestCode == PermissionUtil.PERMISSION_CAMERA_REQUEST) {
             if (grantResults.length == 3 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startCamera();
             } else {
                 Util.showToast(ConversationActivity.this, "Camera permission denied.");
             }
-        } else if (requestCode == 1) {
+        } else if (requestCode == PermissionUtil.PERMISSION_GALLERY_REQUEST) {
             if (grantResults.length == 2 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 openGallery();
             } else {
