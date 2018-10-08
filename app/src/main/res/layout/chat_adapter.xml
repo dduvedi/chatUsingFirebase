@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="chatMessage"
+            type="Model.Chat" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/receiverLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nineDp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/receiverNode"
+                android:layout_width="@dimen/fifteendp"
+                android:layout_height="@dimen/fifteendp"
+                android:layout_marginTop="@dimen/nineDp"
+                android:src="@drawable/left_node_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_node_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/receiverMessage"
+                    style="@style/textview_message_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{chatMessage.message}"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageViewReceiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/load"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/senderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nineDp"
+                android:background="@drawable/right_node_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/senderMessage"
+                    style="@style/textview_message_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{chatMessage.message}"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageViewSender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/load"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/senderNode"
+                android:layout_width="@dimen/fifteendp"
+                android:layout_height="@dimen/fifteendp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/fiveDp"
+                android:src="@drawable/right_node_bg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1874327505",
+    "firebase_url": "https://chatapp-19fde.firebaseio.com",
+    "project_id": "chatapp-19fde",
+    "storage_bucket": "chatapp-19fde.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1874327505:android:d6f579c94fb0249a",
+        "android_client_info": {
+          "package_name": "in.rasta.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1874327505-eiq9puqou486v783a980tg7bf6k8ojf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANTIizQBFpdkC5k7mdEQxkK4Mxn4WF1ns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

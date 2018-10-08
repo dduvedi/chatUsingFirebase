@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="conversationViewModel"
+            type="ViewModel.ConversationViewModel" />
+
+        <variable
+            name="conversationActivity"
+            type="in.rasta.chatapp.ConversationActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_transparent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layout_input"></android.support.v7.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:id="@+id/layout_input"
+                style="@style/chat_layouts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chat_message_height"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/message"
+                    style="@style/chat_editTexts"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/fiveDp"
+                    android:layout_weight="1"
+                    android:hint="Write a message..."
+                    android:maxHeight="80dp"
+                    android:textColor="#000"
+                    android:textColorHint="#CFD8DC" />
+
+                <ImageView
+                    android:layout_width="@dimen/drawer_element_height"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->conversationActivity.selectImage()}"
+                    android:padding="4dp"
+                    android:src="@android:drawable/ic_menu_camera" />
+
+                <ImageView
+                    android:layout_width="@dimen/drawer_element_height"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()-> conversationActivity.onSendMessageClicked()}"
+                    android:padding="4dp"
+                    android:src="@android:drawable/ic_menu_send" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

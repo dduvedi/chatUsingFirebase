@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_width">24dp</dimen>
+    <dimen name="drawer_element_height">47dp</dimen>
+
+    <dimen name="margin1">16dp</dimen>
+    <dimen name="drawer_banner">130dp</dimen>
+    <dimen name="drawer_padding">16dp</dimen>
+    <dimen name="navigation_drawer_width">300dp</dimen>
+
+    <dimen name="twodp">2dp</dimen>
+    <dimen name="paddingsixdp">16dp</dimen>
+    <dimen name="fifteendp">16dp</dimen>
+    <dimen name="thirtyfivedp">35dp</dimen>
+    <dimen name="twentyDp">15dp</dimen>
+    <dimen name="nineDp">7dp</dimen>
+
+    <!--text sizes-->
+    <dimen name="sixteenSp">20sp</dimen>
+
+</resources>

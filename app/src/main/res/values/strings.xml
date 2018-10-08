@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Talk</string>
+    <string name="welcome_message">Welcome!\n Start Chatting with your loved ones.</string>
+</resources>
