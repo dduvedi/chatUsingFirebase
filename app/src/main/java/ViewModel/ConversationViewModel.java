@@ -102,7 +102,7 @@ public class ConversationViewModel extends BaseObservable implements FirebaseCal
     }
 
     public void uploadImage(byte[] image) {
-        final StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("images/" + sender + "_" + receiver + "/");
+        final StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("images/" + sender + "_" + receiver + UUID.randomUUID() + "/");
         UploadTask uploadTask = storageReference.putBytes(image);
         uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
             @Override
