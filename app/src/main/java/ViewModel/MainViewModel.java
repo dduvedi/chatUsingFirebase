@@ -65,7 +65,9 @@ public class MainViewModel extends ViewModel {
                     userCollection.setUserCollectionDetailsList(userCollectionDetails);
                     userCollectionResponse.setValue(userCollection);
                 } else {
-                    errorMessage.setValue("No user(s) found");
+                    if (lastItem == null && lastItem.isEmpty())
+                        errorMessage.setValue("No users found");
+
                     showProgress.setValue(false);
                 }
 
