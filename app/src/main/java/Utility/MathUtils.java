@@ -80,7 +80,22 @@ public class MathUtils {
         return str1.concat(str2);
     }
 
-    public static double convertToDouble(Object obj) {
-        return ((Number) obj).doubleValue();
+ public static int countTriplets(int[] arr) {
+        int n = arr.length;
+        int count = 0;
+
+        // Three nested loops, each iterating through the array
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    // Check if k is different from i and j, and if the condition is met
+                    if (k != i && k != j && arr[i] + arr[j] == arr[k]) {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
     }
 }
