@@ -82,9 +82,7 @@ public class MathUtils {
 
  public static int countTriplets(int[] arr) {
         int n = arr.length;
-        int count = 0;
-
-        // Three nested loops, each iterating through the array
+        int count;
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 for (int k = 0; k < n; k++) {
