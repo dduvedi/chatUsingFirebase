@@ -8,7 +8,7 @@ public class DataProcessor {
     private String processorName;
 
     public DataProcessor(String name) {
-        this.processorName = name;
+        this.processorName = name
     }
 
     public String processData() {
