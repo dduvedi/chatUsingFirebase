@@ -1,0 +1,47 @@
+public class ArithmeticOperations {
+
+    // Add two numbers
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    // Subtract two numbers
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Multiply two numbers
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Divide two numbers
+    public static double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero is not allowed");
+        }
+        return (double) a / b;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 3;
+
+        // Adding numbers
+        System.out.println("Addition: " + add(num1, num2));
+
+        // Subtracting numbers
+        System.out.println("Subtraction: " + subtract(num1, num2));
+
+        // Multiplying numbers
+        System.out.println("Multiplication: " + multiply(num1, num2));
+
+        // Handle division (with error handling for division by zero)
+        try {
+            System.out.println("Division: " + divide(num1, num2));
+        } catch (ArithmeticException e) {
+            System.out.println("Error occurred during division: " + e.getMessage());
+        }
+    }
+}
